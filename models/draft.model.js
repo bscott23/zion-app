@@ -7,12 +7,12 @@ const draftSchema = new Schema(
     user_id: { type: Number, required: true },
     draft_settings: {
       number_of_teams: { type: Number, required: true },
-      categories: [{ category: String }]
+      categories: [{ type: String }]
     },
     teams: [
       {
         team_name: { type: String, required: true },
-        roster: [{ player_nba_id: { type: Number, required: false } }]
+        roster_nba_ids: [{ type: Number }]
       }
     ]
   },
